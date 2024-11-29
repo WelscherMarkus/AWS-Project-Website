@@ -1,0 +1,4 @@
+.idea
+website/node_modules
+website/build
+website/.idea
