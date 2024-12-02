@@ -34,18 +34,23 @@ func main() {
 		})
 	})
 
-	tlsConfig := loadTls()
-
-	server := &http.Server{
-		Addr:      ":8080",
-		Handler:   router,
-		TLSConfig: tlsConfig,
-	}
-
-	err = server.ListenAndServeTLS("", "")
+	err = router.Run(":8080")
 	if err != nil {
 		log.Fatalln(err)
 	}
+
+	//tlsConfig := loadTls()
+	//
+	//server := &http.Server{
+	//	Addr:      ":8080",
+	//	Handler:   router,
+	//	TLSConfig: tlsConfig,
+	//}
+	//
+	//err = server.ListenAndServeTLS("", "")
+	//if err != nil {
+	//	log.Fatalln(err)
+	//}
 }
 
 func loadTls() *tls.Config {
