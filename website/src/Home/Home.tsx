@@ -52,7 +52,7 @@ export const Home = () => {
                         width: '40vw',
                     }}>
                         <Typography variant="h3" color="#f5f5f5" sx={{ letterSpacing: '1px' }}>
-                            Aspiring Software Engineer
+                            Software Engineer
                         </Typography>
                     </Box>
 
